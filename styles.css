@@ -30,6 +30,18 @@
   }
 }
 
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  100% {
+    fill: #EAAA7F;
+  }
+}
+
 /*STYLES*/
 
 body {
@@ -149,7 +161,15 @@ a:hover .st0 {
 }
 
 .paw {
-  animation: grow 1s ease-out backwards;
+  animation: grow 1.8s ease-out backwards;
+}
+
+.text {
+  stroke: #EAAA7F;
+  stroke-width: 0.3;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: offset .9s linear forwards, fill .9s .2s forwards;
 }
 
 
