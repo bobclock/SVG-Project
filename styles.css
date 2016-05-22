@@ -1,5 +1,14 @@
 /*KEYFRAMES*/
 
+@keyframes linelight {
+  60% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes turn {
   0% {
     transform: rotate(0) scale(0);
@@ -154,10 +163,17 @@ svg * {
   animation: turn 1.1s ease-out backwards;
 }
 
+a .st0 {
+  stroke-opacity: 0;
+}
+
 a:hover .st0 {
   fill: #39add1;
   transition: fill 1.2s;
-  animation: turn 1.1s .2s ease-out backwards;
+  stroke-opacity: 0;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: linelight 1s linear forwards;
 }
 
 .paw {
