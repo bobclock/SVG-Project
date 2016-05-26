@@ -87,6 +87,7 @@ a {
   }
   a svg {
     width: 15px;
+    height: 15px;
   }
 
 
@@ -141,9 +142,16 @@ svg {
   width: 140px;
 }
 
-.logo {
+.text {
   display: none;
 }
+
+.logo {
+  display: block;
+  color: #EAAA7F;
+  font-size: 12px;
+}
+
 
 /*ANIMATIONS */
 
@@ -192,14 +200,12 @@ a:hover .st0 {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 420px) {
-  .st1 {
+@media (min-width: 420px) {
+  .logo {
     display: none;
   }
 
-  .logo {
-    display: block;
-    color: #EAAA7F;
-    font-size: 12px;
+  .text {
+    display: inline;
   }
 }
